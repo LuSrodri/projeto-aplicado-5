@@ -1,0 +1,33 @@
+#product {
+  display: flex;
+  justify-content: space-between;
+  background: var(--cor-bg-input);
+  padding: 10px;
+  margin: 4px 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.nomeDoProduto {
+  font-size: 20px;
+  color: var(--cor-shadow);
+  margin-right: 5px;
+}
+
+.etiqueta {
+  font-size: 15px;
+  margin: 0 10px;
+}
+
+.precoDoProdutoVenda {
+  font-size: 20px;
+  color: var(--cor-primary);
+  font-weight: 700;
+}
+
+.containerPreco {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}

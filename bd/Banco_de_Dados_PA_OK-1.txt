@@ -1,0 +1,118 @@
+# BANCO DE DADOS
+# PA - GERENCIAMENTO DE NEGÓCIOS
+
+/*
+CREATE DATABASE Cadastros;
+SHOW DATABASES;
+USE Cadastros;
+DESCRIBE Proprietário;
+SELECT * FROM Produto;
+TRUNCATE TABLE Proprietário;
+DROP TABLE Produto;
+*/
+
+CREATE TABLE Proprietário(
+    ID_Proprietário int,
+    Nome varchar (500),
+    CPF int (11),
+    RG int (10),
+    CNPJ int (14),
+    IE int (12),
+    Razão_Social varchar (500), 
+    Ramo_Atividade varchar (500),
+    Nome_Fantasia varchar (500),
+    Rua varchar (500),
+    Número int (6),
+    Bairro varchar (500),
+    Complemento varchar (500),
+    CEP int (9),
+    Cidade varchar (500),
+    UF varchar (2),
+    Pais varchar (500),
+    Telefone int (11),
+    Celular int (11),
+    Email varchar (500),
+    Porte varchar (500),
+    CNAE int (7),
+    Filial int (3)
+)
+ALTER TABLE Proprietário ADD PRIMARY KEY (ID_Proprietário);
+
+CREATE TABLE Cliente(
+    ID_Cliente int,
+    Nome varchar (500),
+    CPF int (11),
+    RG int (10),
+    Rua varchar (500),
+    Número int (6),
+    Bairro varchar (500),
+    Complemento varchar (500),
+    CEP int (9),
+    Cidade varchar (500),
+    UF varchar (2),
+    Pais varchar (500),
+    Telefone int (11),
+    Celular int (11),
+    Email varchar (500)
+)
+ALTER TABLE Cliente ADD PRIMARY KEY (ID_Cliente);
+
+CREATE TABLE Fornecedor(
+    ID_Fornecedor int,
+    Nome varchar (500),
+    CNPJ int (14),
+    Razão_Social varchar (500),
+    Ramo_Atividade varchar (500),
+    Rua varchar (500),
+    Número int (6),
+    Bairro varchar (500),
+    Complemento varchar (500),
+    CEP int (9),
+    Cidade varchar (500),
+    UF varchar (2),
+    Pais varchar (500),
+    Telefone int (11),
+    Celular int (11),
+    Email varchar (500)
+)
+ALTER TABLE Fornecedor ADD PRIMARY KEY (ID_Fornecedor);
+
+CREATE TABLE Produto(
+    ID_Produto int,
+    Nome varchar (500),
+    Preço_Custo int (10),
+    Preço_Venda int (10),
+    Categoria varchar (500),
+    Marca varchar (500),
+    Lote int (50),
+    Origem varchar (500),
+    Altura int (10),
+    Largura int (10),
+    Comprimento int (10),
+    Peso int (10),
+    Validade int (10),
+    ID_Fornecedor int
+)
+ALTER TABLE Produto ADD PRIMARY KEY (ID_Produto); 
+ALTER TABLE Produto ADD FOREIGN KEY (ID_Fornecedor) REFERENCES Fornecedor (ID_Fornecedor);
+
+CREATE TABLE Funcionário(
+    ID_Funcionário int,
+    Nome varchar (500),
+    CPF int (11),
+    RG int (10),
+    Rua varchar (500),
+    Número int (6),
+    Bairro varchar (500),
+    Complemento varchar (500),
+    CEP int (9),
+    Cidade varchar (500),
+    UF varchar (2),
+    Pais varchar (500),
+    Telefone int (11),
+    Celular int (11),
+    Email varchar (500),
+    Admissão int (10),
+    Salário int (10)
+)
+ALTER TABLE Funcionário ADD PRIMARY KEY (ID_Funcionário);

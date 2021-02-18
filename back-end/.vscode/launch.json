@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Pa4Application<pa4>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.pa4.pa4.Pa4Application",
+      "projectName": "pa4",
+      "args": ""
+    }
+  ]
+}

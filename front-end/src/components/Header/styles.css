@@ -1,0 +1,37 @@
+header{
+  background: var(--cor-primary);
+  height: 5vh;
+  box-shadow: 0 1px 5px var(--cor-shadow);
+  display: flex;
+  width: 100%;
+}
+
+.margem{
+  margin: 0 8vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header span a{
+  color: var(--cor-white);
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+}
+ul.menu{
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+ul li {
+  list-style: none;
+  width: 100px;
+}
+
+ul li a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--cor-white);
+}
